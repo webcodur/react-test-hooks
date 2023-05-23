@@ -9,7 +9,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename="/react-test-hooks/">
 			<Routes>
 				<Route index element={<HomePage />} />
 				<Route path="/useCallbackPage" element={<UseCallbackPage />} />
