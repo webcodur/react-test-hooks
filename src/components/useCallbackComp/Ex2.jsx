@@ -23,7 +23,6 @@ const UseCallbackComp2 = () => {
 			<input
 				type="number"
 				value={size}
-				// style={{ WebkitAppearance: 'none', MozAppearance: 'textfield' }}
 				onChange={(e) => setSizess(e.target.value)}
 			/>
 			<button onClick={() => setIsDark(!isDark)}>다크모드</button>
