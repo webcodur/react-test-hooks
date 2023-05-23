@@ -28,13 +28,13 @@ const useCallbackPage = () => {
 	return (
 		<>
 			<div style={outerDivStyle}>
-				useCallback 훅 연습1
+				<h1>Ex1</h1>
 				<textarea defaultValue={text1} style={textAreaStyle}></textarea>
 				<Ex1 />
 			</div>
 
 			<div style={outerDivStyle}>
-				useCallback 훅 연습2
+				<h1>Ex2</h1>
 				<textarea defaultValue={text2} style={textAreaStyle}></textarea>
 				<Ex2 />
 			</div>
