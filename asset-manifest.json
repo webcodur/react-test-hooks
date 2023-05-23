@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/react-test-hooks/static/js/main.855abc5b.js",
-    "index.html": "/react-test-hooks/index.html",
-    "main.855abc5b.js.map": "/react-test-hooks/static/js/main.855abc5b.js.map"
+    "main.js": "/webcodur/react-test-hooks/static/js/main.7f9fd260.js",
+    "index.html": "/webcodur/react-test-hooks/index.html",
+    "main.7f9fd260.js.map": "/webcodur/react-test-hooks/static/js/main.7f9fd260.js.map"
   },
   "entrypoints": [
-    "static/js/main.855abc5b.js"
+    "static/js/main.7f9fd260.js"
   ]
 }
