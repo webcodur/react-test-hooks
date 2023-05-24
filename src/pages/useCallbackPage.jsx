@@ -1,44 +1,32 @@
 import Ex1 from '../components/useCallbackComp/Ex1';
 import Ex2 from '../components/useCallbackComp/Ex2';
+import { HrTag, ExampleTag, TextAreaTag, TitleTag } from '../style/Tags';
+import { PageLayout } from '../style/Layouts';
+import { EmptyH100 } from '../style/EmptySpace';
+import { text1, text2 } from '../data/useCallbackData';
 
 const useCallbackPage = () => {
-	const text1 = `
-    input 변화마다 useEffect로 
-    함수의 리랜더 여부 확인...
-  `;
-
-	const text2 = `
-    다크모드시 boxStyle함수가
-    리랜더링되지 않게 처리
-  `;
-
-	const outerDivStyle = {
-		marginTop: '30px',
-		width: '235px',
-		border: '1px solid black',
-	};
-
-	const textAreaStyle = {
-		width: '230px',
-		height: '70px',
-		border: '1px solid black',
-		padding: '0px',
-	};
-
 	return (
-		<>
-			<div style={outerDivStyle}>
-				<h1>Ex1</h1>
-				<textarea defaultValue={text1} style={textAreaStyle}></textarea>
-				<Ex1 />
-			</div>
+		<PageLayout>
+			{/* title */}
+			<TitleTag>useCallback</TitleTag>
 
-			<div style={outerDivStyle}>
+			{/* example1 */}
+			<ExampleTag>
+				<h1>Ex1</h1>
+				<TextAreaTag defaultValue={text1}></TextAreaTag>
+				<Ex1 />
+			</ExampleTag>
+			<HrTag />
+
+			{/* example2 */}
+			<ExampleTag>
 				<h1>Ex2</h1>
-				<textarea defaultValue={text2} style={textAreaStyle}></textarea>
+				<TextAreaTag defaultValue={text2}></TextAreaTag>
 				<Ex2 />
-			</div>
-		</>
+			</ExampleTag>
+			<EmptyH100 />
+		</PageLayout>
 	);
 };
 

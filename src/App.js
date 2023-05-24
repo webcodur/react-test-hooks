@@ -24,22 +24,24 @@ const HeaderStyle = styled.div`
 		color: Red;
 	}
 `;
-
+// https://webcodur.github.io/react-test-hooks/
 function App() {
 	return (
 		<BrowserRouter>
 			{/* Header */}
 			<HeaderStyle>
-				<Link to={'./'}>HomePage</Link>
+				<Link to={'./homePage'}>HomePage</Link>
 				<Link to={'./useCallbackPage'}>useCallback</Link>
 				<Link to={'./useMemoPage'}>useMemo</Link>
 				<Link to={'./useContextPage'}>useContext</Link>
 				<Link to={'./useReducerPage'}>useReducer</Link>
 				<Link to={'./usePromisePage'}>usePromise</Link>
 			</HeaderStyle>
+			{/* <HomePage /> */}
 			{/* Routes */}
 			<Routes>
 				<Route index element={<HomePage />} />
+				<Route path="/homePage" element={<HomePage />} />
 				<Route path="/useCallbackPage" element={<UseCallbackPage />} />
 				<Route path="/useContextPage" element={<UseContextPage />} />
 				<Route path="/useMemoPage" element={<UseMemoPage />} />
