@@ -2,12 +2,12 @@ import HomePage from './pages/homePage';
 import UseCallbackPage from './pages/useCallbackPage';
 import UseContextPage from './pages/useContextPage';
 import UseMemoPage from './pages/useMemoPage';
-import UsePromisePage from './pages/usePromisePage';
 import UseReducerPage from './pages/useReducerPage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { UserContext } from './context/UserContext';
 
 const HeaderStyle = styled.div`
 	display: flex;
@@ -24,31 +24,30 @@ const HeaderStyle = styled.div`
 		color: Red;
 	}
 `;
-// https://webcodur.github.io/react-test-hooks/
 function App() {
 	return (
-		<BrowserRouter>
-			{/* Header */}
-			<HeaderStyle>
-				<Link to={'./homePage'}>HomePage</Link>
-				<Link to={'./useCallbackPage'}>useCallback</Link>
-				<Link to={'./useMemoPage'}>useMemo</Link>
-				<Link to={'./useContextPage'}>useContext</Link>
-				<Link to={'./useReducerPage'}>useReducer</Link>
-				<Link to={'./usePromisePage'}>usePromise</Link>
-			</HeaderStyle>
-			{/* <HomePage /> */}
-			{/* Routes */}
-			<Routes>
-				<Route index element={<HomePage />} />
-				<Route path="/homePage" element={<HomePage />} />
-				<Route path="/useCallbackPage" element={<UseCallbackPage />} />
-				<Route path="/useContextPage" element={<UseContextPage />} />
-				<Route path="/useMemoPage" element={<UseMemoPage />} />
-				<Route path="/usePromisePage" element={<UsePromisePage />} />
-				<Route path="/useReducerPage" element={<UseReducerPage />} />
-			</Routes>
-		</BrowserRouter>
+		<UserContext.Provider value={{ name: 'John', id: 'John01' }}>
+			<BrowserRouter>
+				{/* Header */}
+				<HeaderStyle>
+					<Link to={'./homePage'}>HomePage</Link>
+					<Link to={'./useContextPage'}>useContext</Link>
+					<Link to={'./useCallbackPage'}>useCallback</Link>
+					<Link to={'./useMemoPage'}>useMemo</Link>
+					<Link to={'./useReducerPage'}>useReducer</Link>
+				</HeaderStyle>
+
+				{/* Routes */}
+				<Routes>
+					<Route index element={<HomePage />} />
+					<Route path="/homePage" element={<HomePage />} />
+					<Route path="/useContextPage" element={<UseContextPage />} />
+					<Route path="/useCallbackPage" element={<UseCallbackPage />} />
+					<Route path="/useMemoPage" element={<UseMemoPage />} />
+					<Route path="/useReducerPage" element={<UseReducerPage />} />
+				</Routes>
+			</BrowserRouter>
+		</UserContext.Provider>
 	);
 }
 export default App;

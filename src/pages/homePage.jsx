@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { PageLayout } from '../style/Layouts';
+import { TitleTag } from '../style/Tags';
 
 const TextArea = styled.textarea`
 	width: 700px;
@@ -17,16 +19,16 @@ const HomePage = () => {
   목표 : 각종 리액트 훅스 테스트
   배포링크 : https://webcodur.github.io/react-test-hooks/
   테스트된 훅
-  - useCallback (✔️)
   - useContext (✔️)
-  - useMemo
-  - usePromise
-  - useReducer`;
+  - useCallback (✔️)
+  - useMemo (✔️)
+  - useReducer (✔️)`;
 
 	return (
-		<>
+		<PageLayout>
+			<TitleTag>React Hooks Test</TitleTag>
 			<TextArea defaultValue={text} />
-		</>
+		</PageLayout>
 	);
 };
 

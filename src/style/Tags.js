@@ -21,9 +21,9 @@ export const ExampleTag = styled.div`
 
 export const TextAreaTag = styled.textarea`
 	width: 100%;
-	height: 170px;
 	border: 1px solid black;
 	padding: 0px;
 	font-size: 18px;
 	resize: none;
+	height: ${(props) => props.height || '170px'};
 `;
